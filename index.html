@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<title>Form</title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="row g-3 p-4">
+				<div>
+        	<h2 class="fw-lighter">Create New Task</h2>
+				</div>
+        <hr data-content="AND" class="hr-text">
+        <form class="d-flex flex-column gap-3">
+            <!-- Title and Location -->
+            <div class="row g-3">
+                <div class="col">
+                    <label class="fw-bold" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="title" required>
+                </div>
+                <div class="col">
+                    <label class="fw-bold" for="location">Location</label>
+                    <select class="form-select" id="location" name="location">
+                        <option value="" selected disabled>Select location</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Type and Criticality -->
+            <div class="row g-3">
+                <div class="col">
+                    <label class="fw-bold" for="type">Type</label>
+                    <select class="form-select" id="type" name="type">
+                        <option value="incident">Incident</option>
+                        <option value="request">Request</option>
+                        <!-- Add more types as needed -->
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="fw-bold" for="criticality">Criticality</label>
+                    <select class="form-select" id="criticality" name="criticality">
+                        <option value="minor">Minor</option>
+                        <option value="major">Major</option>
+                        <option value="critical">Critical</option>
+                    </select>
+                </div>
+                
+                <!-- Environment -->
+                <div class="col g-3">
+                    <label class="fw-bold">Environment</label>
+                    <div class="row g-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label " for="">Pod</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label " for="">Prepod</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label -bold" for="">Demo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Description -->
+            <div class="row g-3">
+                <label class="fw-bold" for="description">Description</label>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            
+            <!-- Start Date and Duration -->
+            <div class="row g-3">
+                <div class="col g-3">
+                    <label class="row fw-bold" for="duration">Date</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2">
+                            <svg id="i-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="col g-3 ">
+                    <label class="row fw-bold" for="duration">Duration (in hours)</label>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">-</span>
+                      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                      <span class="input-group-text">+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status and Percent Complete -->
+            <div class="row g-3">
+                <div class="col">
+                    <label class="fw-bold" for="status">Status</label>
+                    <select class="form-select" id="status" name="status">
+                        <option value="planned">Planned</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="fw-bold" for="percent-complete">Percent Complete</label>
+                    <select class="form-select" id="percent-complete" name="percent-complete">
+                        <option value="0">0%</option>
+                        <option value="25">25%</option>
+                        <option value="50">50%</option>
+                        <option value="75">75%</option>
+                        <option value="100">100%</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Email Checkbox -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label fw-bold" for="">Check here if you want to send an email</label>
+            </div>
+            
+            <hr data-content="AND" class="hr-text">
+            <!-- Buttons -->
+            <div class="d-flex flex-row-reverse gap-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-light">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
